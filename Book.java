@@ -7,7 +7,7 @@ Scanner scanner = new Scanner(System.in);
     private String author;
     private int ISBN;
     int noOfBooksToAdd;
-    String nameOfBooksToRemove;
+    // String nameOfBooksToRemove;
     int indexOfBook;
 
     ArrayList<Book> books = new ArrayList<>();
@@ -64,21 +64,22 @@ Scanner scanner = new Scanner(System.in);
     }
 
     public void remove(){
-        // System.out.print("Enter the number of books you want to remove: ");
-        // noOfBooksToRemove = scanner.nextInt();
+        System.out.print("Enter the number of books you want to remove: ");
+    int noOfBooksToRemove = scanner.nextInt();
 
-        // for (int i = 0; i < noOfBooksToRemove; i++) {
-        //     System.out.println("Enter the index of the book to remove from the collection: ");
-        //     indexOfBook = scanner.nextInt();
-        //     books.remove(indexOfBook);
-        // }
-
-        System.out.println("Enter the name of the book you want to delete: ");
-        nameOfBooksToRemove = scanner.nextLine();
-
-        for(int i = 0; i < books.length(); i++){
-            if(nameOfBooksToRemove.equals(i))
+        for (int i = 0; i < noOfBooksToRemove; i++) {
+            System.out.println("Enter the index of the book to remove from the collection: ");
+            indexOfBook = scanner.nextInt();
+            books.remove(indexOfBook);
         }
+
+        // System.out.print("Enter the name of the book you want to delete: ");
+        // nameOfBooksToRemove = scanner.nextLine();
+
+        // for(int i = 0; i < books.size(); i++){
+        //     if(nameOfBooksToRemove.equals(i));
+        //     books.remove(i);
+        // }
 
 
     }

@@ -30,5 +30,7 @@ public class Main {
             }
         }
         System.out.println("Have a good day!");
+
+        scanner.close();
     }
 }
