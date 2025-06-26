@@ -2,28 +2,35 @@ import java.util.ArrayList;
 
 public class Bank {
 
-    double balance = 0;
+    String name;
+    long accNum;
 
     ArrayList<AccountDetails> accounts = new ArrayList<>();
 
-    public void addAccount(AccountDetails account){
-        accounts.add(account);
+    public void addAcc(){
+        accounts.add(new AccountDetails());
     }
 
+    public void removeAcc(long accNum){
 
-    public void showBalance(){
-        System.out.println("Balance : Rs." + balance);
+        for(int i = 0; i < accounts.size(); i++){
+            if(accNum == i){
+                accounts.remove(i);
+            }
+            else{
+                System.out.println("Invalid Account Name");
+            }
+        }
     }
 
-    public double deposit(double balance){
-        balance += this.balance;
-        return balance;
+    public void showAccounts(){
+        if(accounts.isEmpty()){
+            System.out.println("No accounts available");
+        }
+        else {
+            for(AccountDetails acc : accounts){
+                System.out.println(acc);
+            }
+        }
     }
-
-    public double withdraw(double balance){
-        balance -= this.balance;
-        return balance;
-    }
-
-
 }
