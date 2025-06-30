@@ -19,7 +19,7 @@ public class TicTacToe {
 
     boolean gameOver = false;
 
-    TIcTacToe(){
+    TicTacToe(){
         frame.setVisible(true);
         frame.setSize(boardWidth, boardHeight);
         frame.setLocationRelativeTo(null);
